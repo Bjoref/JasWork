@@ -1,0 +1,9 @@
+.app-logo {
+  font-size: 48px;
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px solid var(--secondary-color);
+    outline-offset: 5px;
+  }
+}

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/reset";
+@import "assets/scss/fonts";
+@import "assets/scss/variables";
+@import "assets/scss/container";
+
+body {
+  color: var(--primary-color);
+  background-color: var(--bright-secondary-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: var(--fonts-stack);
+}

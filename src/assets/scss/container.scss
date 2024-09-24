@@ -1,0 +1,5 @@
+.container {
+  @media (min-width: 1280px) {
+    padding: 0 var(--container-padding_desk);
+  }
+}

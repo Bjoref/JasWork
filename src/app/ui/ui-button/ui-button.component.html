@@ -1,1 +1,15 @@
-<p>ui-button works!</p>
+<ng-container [ngSwitch]="buttonData?.type">
+  <ng-container *ngSwitchCase="'link'">
+    <a routerLink="{{ buttonData?.link }}">{{ buttonData?.text }}</a>
+  </ng-container>
+  <ng-container *ngSwitchCase="'button'">
+    <button
+      class="ui-button__button"
+      [ngClass]="{
+          'ui-button__button_primary': buttonData?.appearance === UiButtonAppearance.primary,
+        }"
+    >
+      {{ buttonData?.text }}
+    </button>
+  </ng-container>
+</ng-container>

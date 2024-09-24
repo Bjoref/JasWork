@@ -2,4 +2,12 @@
     padding-top: 32px;
     padding-bottom: 32px;
     background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    &__first-row {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

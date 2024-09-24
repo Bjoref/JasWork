@@ -1,1 +1,8 @@
-<p>ui-list works!</p>
+<ul
+  class="ui-list"
+  [ngClass]="{
+    'ui-list_column': state === UiListStates.column,
+  }"
+>
+  <ui-item *ngFor="let item of items" [buttonData]="item"></ui-item>
+</ul>

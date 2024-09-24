@@ -1,0 +1,21 @@
+.ui-button {
+  &__button {
+    width: 128px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_primary {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      outline: 2px solid var(--secondary-color);
+
+      &:hover {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        outline: 2px solid var(--secondary-color);
+      }
+    }
+  }
+}

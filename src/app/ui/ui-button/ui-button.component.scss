@@ -17,5 +17,17 @@
         outline: 2px solid var(--secondary-color);
       }
     }
+
+    &_secondary {
+      background-color: transparent;
+      color: var(--primary-color);
+      outline: 2px solid var(--primary-color);
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        outline: 2px solid var(--primary-color);
+      }
+    }
   }
 }

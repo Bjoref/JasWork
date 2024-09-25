@@ -7,7 +7,9 @@
       class="ui-button__button"
       [ngClass]="{
           'ui-button__button_primary': buttonData?.appearance === UiButtonAppearance.primary,
+          'ui-button__button_secondary': buttonData?.appearance === UiButtonAppearance.secondary,
         }"
+      (click)="triggerParentFunction()"
     >
       {{ buttonData?.text }}
     </button>

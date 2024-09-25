@@ -12,8 +12,16 @@ import { UiButton } from '../../models/uiButton';
   styleUrl: './ui-button.component.scss'
 })
 export class UiButtonComponent {
-  @Input () buttonData?: UiButton;
+  @Input() buttonData?: UiButton;
+
+  @Input() callbackFunction!: () => void;
 
   public UiButtonAppearance = UiButtonAppearance;
+
+  triggerParentFunction(): void {
+    if (this.callbackFunction) {
+      this.callbackFunction();
+    }
+  }
 
 }

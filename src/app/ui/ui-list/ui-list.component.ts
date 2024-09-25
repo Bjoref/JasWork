@@ -12,8 +12,8 @@ import { UiListStates } from './ui-list-states.enum';
   styleUrl: './ui-list.component.scss'
 })
 export class UiListComponent {
-  @Input () items: UiButton[] = [];
-  @Input () state: UiListStates = UiListStates.row;
+  @Input() items: UiButton[] = [];
+  @Input() state: UiListStates = UiListStates.row;
 
   public UiListStates = UiListStates;
 }

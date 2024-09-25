@@ -1,0 +1,21 @@
+.ui-modal {
+    &__header {
+        padding: 16px 32px;
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    &__content {
+        padding: 16px 32px;
+    }
+
+    &__actions {
+        padding: 16px 32px;
+
+        &-controls {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

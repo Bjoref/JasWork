@@ -58,6 +58,7 @@ export class AppHeaderComponent {
       text: this.loginButtonText,
     };
   }
+  
   public login = (): void => {
     if (this.isAuthenticated()) {
       this.loginButtonText = 'Вход';

@@ -13,8 +13,10 @@ import { UiButton } from '../../models/uiButton';
 })
 export class UiButtonComponent {
   @Input() buttonData?: UiButton;
+  @Input() width_100: boolean = false;
 
   @Input() callbackFunction!: () => void;
+
 
   public UiButtonAppearance = UiButtonAppearance;
 

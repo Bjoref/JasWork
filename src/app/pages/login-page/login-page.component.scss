@@ -1,0 +1,26 @@
+.section-hero {
+    background-image: url(../../../assets/public/bg-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    &__container {
+        padding-top: 124px;
+        padding-bottom: 124px;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    &__left-content {
+        max-width: 65%;
+    }
+
+    &__title {
+        font-size: 124px;
+    }
+
+    &__text {
+        font-size: 36px;
+        color: var(--secondary-color);
+        -webkit-text-stroke: 2px var(--primary-color);
+    }
+}

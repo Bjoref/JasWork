@@ -1,0 +1,30 @@
+<div class="login-form">
+    <h3 class="login-form__second-title">Введите email/логин и пароль</h3>
+
+    <!-- Форма для авторизации -->
+    <form [formGroup]="loginForm" class="login-form__form">
+        <div class="login-form__form-group">
+            <div class="login-form__form-input-container">
+                <input class="login-form__form-input" id="email" formControlName="email" type="text" placeholder=" " />
+                <label class="login-form__form-label" for="email">Email/Логин</label>
+            </div>
+            <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text_error">
+                Некорректный email или логин
+            </div>
+        </div>
+
+        <div class="login-form__form-group">
+            <div class="login-form__form-input-container">
+                <input class="login-form__form-input" id="password" formControlName="password" type="password" placeholder=" " />
+                <label class="login-form__form-label" for="password">Пароль</label>
+            </div>
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text_error">
+                Пароль обязателен
+            </div>
+        </div>
+    </form>
+
+    <div class="login-form__footer">
+        <ui-button [buttonData]="loginButton" [callbackFunction]="submitForm" [width_100]="true" style="width: 100%;"></ui-button>
+    </div>
+</div>

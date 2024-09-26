@@ -1,5 +1,7 @@
 .container {
+  margin: 0 auto;
   @media (min-width: 1280px) {
     padding: 0 var(--container-padding_desk);
+    max-width: var(--container-width_desk);
   }
 }

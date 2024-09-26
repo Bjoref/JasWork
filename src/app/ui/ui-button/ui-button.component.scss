@@ -12,7 +12,7 @@
       outline: 2px solid var(--secondary-color);
 
       &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--bright-secondary-color);
         color: var(--primary-color);
         outline: 2px solid var(--secondary-color);
       }
@@ -28,6 +28,10 @@
         color: var(--secondary-color);
         outline: 2px solid var(--primary-color);
       }
+    }
+
+    &_width-100 {
+      width: 100%;
     }
   }
 }

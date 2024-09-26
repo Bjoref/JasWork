@@ -8,6 +8,7 @@
       [ngClass]="{
           'ui-button__button_primary': buttonData?.appearance === UiButtonAppearance.primary,
           'ui-button__button_secondary': buttonData?.appearance === UiButtonAppearance.secondary,
+          'ui-button__button_width-100': width_100,
         }"
       (click)="triggerParentFunction()"
     >

@@ -1,0 +1,15 @@
+<section class="ui-form">
+    <form [formGroup]="formData.form" class="ui-form__form">
+        <ng-container *ngFor="let formGroup of formData.formGroupData">
+            <div class="ui-form__form-group">
+                <div class="ui-form__form-input-container">
+                    <input class="ui-form__form-input" [id]="formGroup.id" [formControlName]="formGroup.id" [type]="formGroup.inputType" placeholder=""/>
+                    <label class="ui-form__form-label" [for]="formGroup.id">{{ formGroup.labelText }}</label>
+                </div>
+                <div *ngIf="formData.form.get(formGroup.id)?.invalid && formData.form.get(formGroup.id)?.touched" class="text_error">
+                    {{ formGroup.errorText }}
+                </div>
+            </div>
+        </ng-container>
+    </form>
+</section>

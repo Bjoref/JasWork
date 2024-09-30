@@ -1,0 +1,24 @@
+.registration-form {
+    &__container {
+        padding-top: 124px;
+        padding-bottom: 124px;
+    }
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        &-input {
+            &-container {
+                display: flex;
+                gap: 16px;
+            }
+        }
+    }
+}

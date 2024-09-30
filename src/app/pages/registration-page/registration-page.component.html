@@ -1,0 +1,27 @@
+<section class="registration-form">
+    <div class="registration-form__container container">
+        <h2 class="registration-form__title">Форма регистрации</h2>
+        
+        <!-- Форма для авторизации -->
+        <form [formGroup]="registrationForm" class="registration-form__form">
+            <div class="registration-form__form-group">
+                <div class="registration-form__form-input-container">
+                    <label class="registration-form__form-label" for="email">Email/Логин</label>
+                    <input class="registration-form__form-input" id="email" formControlName="email" type="text" placeholder=" " />
+                </div>
+            </div>
+        
+            <div class="registration-form__form-group">
+                <div class="registration-form__form-input-container">
+                    <label class="registration-form__form-label" for="password">Пароль</label>
+                    <input class="registration-form__form-input" id="password" formControlName="password" type="password" placeholder=" " />
+                </div>
+            </div>
+        </form>
+        
+        <div class="registration-form__footer">
+        
+        </div>
+    </div>
+</section>
+

@@ -15,10 +15,13 @@ import {
 import { LoginService } from '../../servers/login-service.service';
 import { Router } from '@angular/router';
 
+import { UiForm } from '../../models/UiForm';
+import { UiFormComponent } from '../../ui/ui-form/ui-form.component';
+
 @Component({
   selector: 'app-login-form',
   standalone: true,
-  imports: [UiButtonComponent, ReactiveFormsModule, CommonModule],
+  imports: [UiButtonComponent, ReactiveFormsModule, CommonModule, UiFormComponent],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss',
 })
@@ -31,17 +34,44 @@ export class LoginFormComponent {
 
   loginForm: FormGroup;
 
+  loginFormData: UiForm;
+
   constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
+
+    this.loginFormData = {
+      form: this.loginForm,
+      formGroupData: [
+        {
+          id: 'email',
+          labelText: 'Email/Логин',
+          inputType: 'text',
+          errorText: 'Некорректный email или логин',
+        },
+        {
+          id: 'password',
+          labelText: 'Пароль',
+          inputType: 'password',
+          errorText: 'Пароль обязателен',
+        }
+      ]
+    };
   }
 
   public loginButton: UiButton = {
     type: UiButtonTypes.button,
     text: this.loginButtonText,
     appearance: UiButtonAppearance.primary,
+  };
+
+  public registrationButton: UiButton = {
+    type: UiButtonTypes.link,
+    text: 'Зарегистрироваться',
+    appearance: UiButtonAppearance.underlined,
+    link: '/registration',
   };
 
   public toggleAuthentication(): void {

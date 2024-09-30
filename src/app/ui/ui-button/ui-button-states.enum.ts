@@ -10,4 +10,5 @@ export enum UiButtonAppearance {
     secondary = 'secondary',
     success = 'success',
     error = 'error',
+    underlined = 'underlined',
 }

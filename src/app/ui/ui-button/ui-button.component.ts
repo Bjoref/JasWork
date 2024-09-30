@@ -17,7 +17,6 @@ export class UiButtonComponent {
 
   @Input() callbackFunction!: () => void;
 
-
   public UiButtonAppearance = UiButtonAppearance;
 
   triggerParentFunction(): void {

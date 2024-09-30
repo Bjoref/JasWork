@@ -9,7 +9,6 @@ import {
   UiButtonTypes,
 } from '../../ui/ui-button/ui-button-states.enum';
 import { LoginService } from '../../servers/login-service.service';
-import { LoginModalComponent } from '../login-modal/login-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -59,33 +58,4 @@ export class AppHeaderComponent {
     };
   }
   
-  public login = (): void => {
-    if (this.isAuthenticated()) {
-      this.loginButtonText = 'Вход';
-      this.updateLoginButtonStates();
-      this.loginService.toggleAuth();
-    } else {
-      this.openDialog();
-    }
-  };
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(LoginModalComponent, {
-      width: '560px',
-    });
-
-    dialogRef.afterClosed().subscribe(() => {
-      this.afterDialogClose();
-    });
-  }
-
-  afterDialogClose(): void {
-    if (this.isAuthenticated()) {
-      this.loginButtonText = 'Выход';
-    } else {
-      this.loginButtonText = 'Вход';
-    }
-
-    this.updateLoginButtonStates();
-  }
 }

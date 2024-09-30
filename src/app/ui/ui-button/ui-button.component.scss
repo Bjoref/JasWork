@@ -33,5 +33,14 @@
     &_width-100 {
       width: 100%;
     }
+
+    &_underlined {
+      color: var(--primary-color);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

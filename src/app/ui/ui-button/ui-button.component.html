@@ -1,6 +1,15 @@
 <ng-container [ngSwitch]="buttonData?.type">
   <ng-container *ngSwitchCase="'link'">
-    <a routerLink="{{ buttonData?.link }}">{{ buttonData?.text }}</a>
+    <a 
+      [ngClass]="{
+        'ui-button__button_primary': buttonData?.appearance === UiButtonAppearance.primary,
+        'ui-button__button_secondary': buttonData?.appearance === UiButtonAppearance.secondary,
+        'ui-button__button_underlined': buttonData?.appearance === UiButtonAppearance.underlined,
+        'ui-button__button_width-100': width_100,
+      }"
+      routerLink="{{ buttonData?.link }}">
+        {{ buttonData?.text }}
+    </a>
   </ng-container>
   <ng-container *ngSwitchCase="'button'">
     <button
@@ -8,6 +17,7 @@
       [ngClass]="{
           'ui-button__button_primary': buttonData?.appearance === UiButtonAppearance.primary,
           'ui-button__button_secondary': buttonData?.appearance === UiButtonAppearance.secondary,
+          'ui-button__button_underlined': buttonData?.appearance === UiButtonAppearance.underlined,
           'ui-button__button_width-100': width_100,
         }"
       (click)="triggerParentFunction()"
